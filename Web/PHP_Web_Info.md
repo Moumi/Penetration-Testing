@@ -50,11 +50,13 @@ For the verification: password_verify
 
 
 * Know the HTTP headers
-      200 - OK
-      302 - Found
-      401 - Unauthorized
-      404 - Not Found
-      500 - Internal Error
+
+        200 - OK
+        302 - Found
+        401 - Unauthorized
+        404 - Not Found
+        500 - Internal Error
+        
 * Encoding
 
 | Character 	| URL encoded value 	|
