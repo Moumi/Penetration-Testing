@@ -76,24 +76,24 @@ cat /var/lib/php5/sess_o8d7lr4p16d9gec7ofkdbnhm93
 pentesterlab|s:12:"pentesterlab";
 ````
 * **XSS**: Watchout for ``PHP_SELF`` being rendered as a form attribute. This can be exploited by escaping the `Action` html element.
-* **SQL Injc**:
- * When spaces are not allowed, you can use comments `/* */`
- * Numerical Injection can work with unions
+* **SQL Inj**:
+   * When spaces are not allowed, you can use comments `/* */`
+   * Numerical Injection can work with unions
 * **Path Traversal**
-  * You can use x00 at the end to remove things the server code appends.
-  * You can append the destination to the existing file url if there is some kind of filtering
+    * You can use x00 at the end to remove things the server code appends.
+    * You can append the destination to the existing file url if there is some kind of filtering
 * **File Inclusion**
-  * You can use x00 at the end to remove things the server code appends
+    * You can use x00 at the end to remove things the server code appends
 * **Code Injection**
-  * `Eval`: If this function is used then an example escape mechanism is: **test";system("uname -a");$dummy ="**
-  * `preg_replace`: if PHP is below 7.0 you can append `/e` at the end of the pattern. This will cause the new pattern variable to be executed as code.
-  * `assert`: When assertion arguments is wrong, it is executed as PHP code
+    * `Eval`: If this function is used then an example escape mechanism is: **test";system("uname -a");$dummy ="**
+    * `preg_replace`: if PHP is below 7.0 you can append `/e` at the end of the pattern. This will cause the new pattern variable to be executed as code.
+    * `assert`: When assertion arguments is wrong, it is executed as PHP code
 * **Command Injection**
-  * Use new line %0A to escape and append commands
-  * If nothing happens then maybe the function `header` is used. This means that I can catch the redirect on burp.
+    * Use new line %0A to escape and append commands
+    * If nothing happens then maybe the function `header` is used. This means that I can catch the redirect on burp.
 * **LDAP** :
- * Always try null based credentials (this case was LDAP). To put null parameters you have to delete them not put them empty
- * Check the filter syntax. Easy to escape
+   * Always try null based credentials (this case was LDAP). To put null parameters you have to delete them not put them empty
+   * Check the filter syntax. Easy to escape
 
 
 ## Other
