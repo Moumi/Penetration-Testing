@@ -2,6 +2,7 @@
 
 ## Identify Weak Services
 Find services with "weak permissions".
+
     # Command 1
     ## List services, filter system32 and dumps output.
     for /f "tokens=2 delims='='" %a in ('wmic service list full^|find /i "pathname"^|find /i /v "system32"') do @echo %a >> c:\windows\temp\permissions.txt
