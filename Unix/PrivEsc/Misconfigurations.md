@@ -15,5 +15,3 @@ One can find files with a SUID bit using:
 This type of misconfiguration may aid the attacker to gain access to files and/or directories which contain sensitive information. He may even alter the data. These type of world-readable -or writable files/directories can be found using:  
 
     find / -perm -2 ! -type l -ls
-
-##
